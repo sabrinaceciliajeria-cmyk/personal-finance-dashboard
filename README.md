@@ -27,7 +27,7 @@ El desarrollo está enfocado en aplicar buenas prácticas de ingeniería fronten
 ## Fases del proyecto
 
 - ✓ **Fase 0 — Inicialización del proyecto**
-- ○ **Fase 1 — Fundamentos + React + Setup**
+- ✓ **Fase 1 — Fundamentos + React + Setup**
 - ○ **Fase 2 — Arquitectura + Layout + UI**
 - ○ **Fase 3 — Transacciones + Estado + Formularios**
 - ○ **Fase 4 — Persistencia + Dashboard + Gráficos**
@@ -38,19 +38,19 @@ El desarrollo está enfocado en aplicar buenas prácticas de ingeniería fronten
 
 ## Tecnologías
 
-| Tecnología            | Uso                               |
-| --------------------- | --------------------------------- |
-| React                 | Construcción de la interfaz       |
-| TypeScript            | Tipado estático                   |
-| Vite                  | Desarrollo y build                |
-| React Router          | Navegación                        |
-| Recharts              | Visualización de datos            |
-| CSS                   | Estilos y diseño responsive       |
-| Vitest                | Testing                           |
-| React Testing Library | Testing de componentes            |
-| ESLint                | Calidad y consistencia del código |
-| Prettier              | Formateo del código               |
-| Git / GitHub          | Control de versiones              |
+| Tecnología   | Uso                               |
+| ------------ | --------------------------------- |
+| React        | Construcción de la interfaz       |
+| TypeScript   | Tipado estático                   |
+| Vite         | Desarrollo y build                |
+| React Router | Navegación                        |
+| CSS          | Estilos y diseño responsive       |
+| ESLint       | Calidad y consistencia del código |
+| Prettier     | Formateo del código               |
+| pnpm         | Gestión de dependencias           |
+| Git / GitHub | Control de versiones              |
+
+> Vitest, React Testing Library y Recharts se incorporarán en las fases correspondientes.
 
 ## Arquitectura
 
@@ -58,14 +58,14 @@ La aplicación seguirá una arquitectura orientada a funcionalidades, separando 
 
 La persistencia inicial utilizará `localStorage` mediante una capa de servicios independiente. Esto permitirá reemplazar posteriormente la persistencia local por una API REST sin realizar cambios importantes en la interfaz.
 
-> La arquitectura y estructura definitiva se documentarán a medida que avance el desarrollo.
+La estructura arquitectónica se irá incorporando progresivamente a medida que cada funcionalidad lo requiera, evitando complejidad innecesaria durante las primeras fases.
 
 ## Instalación
 
 ### Requisitos
 
 - Node.js
-- npm
+- pnpm
 - Git
 
 ### Clonar el proyecto
@@ -78,20 +78,33 @@ cd personal-finance-dashboard
 ### Instalar dependencias
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Ejecutar en desarrollo
 
 ```bash
-npm run dev
+pnpm dev
+```
+
+### Verificar el código
+
+```bash
+pnpm lint
+pnpm format:check
+```
+
+### Generar build de producción
+
+```bash
+pnpm build
 ```
 
 ## Testing
 
-El proyecto utilizará Vitest y React Testing Library para validar la lógica de negocio y el comportamiento de los componentes.
+El proyecto incorporará Vitest y React Testing Library para validar la lógica de negocio y el comportamiento de los componentes.
 
-La documentación de testing se ampliará a medida que se implemente la suite de pruebas.
+La suite de pruebas se implementará durante la Fase 7.
 
 ## Estado del proyecto
 
@@ -116,8 +129,8 @@ Entre las posibles evoluciones del proyecto se encuentran:
 - Sincronización de datos en la nube
 - Análisis financieros más avanzados
 
-Autor
+## Autor
 
-Sabrina Jeria Figueroa
+**Sabrina Jeria Figueroa**
 
 Desarrolladora Full Stack con orientación al desarrollo Frontend, con conocimientos en desarrollo backend y enfoque en la creación de aplicaciones web modernas, mantenibles y escalables.

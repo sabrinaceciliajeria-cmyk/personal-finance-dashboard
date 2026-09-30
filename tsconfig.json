@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    // indica de que esta compuesto el proyecto
+    { "path": "./tsconfig.app.json" }, // path: indica donde esta la otra confi
+    { "path": "./tsconfig.node.json" }
+  ]
+}
